@@ -1,22 +1,15 @@
-# Define the base class palyer
-class player:
-    def play(self):
-      print("The player is playing cricket.")
-      
-# Define the derived class Batsman
-class Batsman(player):
-  def play(self):
-    print("The batsman is batting.")
-    
-# Define the derived class Bowler
-class Bowler(player):
-  def play(self):
-    print("The bowler is bowling.")
+def linearSearchProduct(productList, targetProduct):
+  indices = []
 
-# create objects of Batsmen and Bowler classes
-batsman = Batsman()
-bowler = Bowler()
+  for index, product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
+  
+  return indices
 
-  # call the paly() method for each object
-batsman.play()
-bowler.play()
+
+# Example usage:
+products = ["shoes", "boot", "Loafer", "shoes", "sandal", "shoes"]
+target = "shoes"
+result = linearSearchProduct(products, target)
+print(result)
